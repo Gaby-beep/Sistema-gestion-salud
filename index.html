@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Salud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Sistema de Gestión de Salud</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#afiliados">Afiliados</a></li>
+            <li><a href="#medicos">Médicos</a></li>
+            <li><a href="#prestaciones">Prestaciones</a></li>
+            <li><a href="#citas">Citas Médicas</a></li>
+            <li><a href="#reportes">Reportes</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="search-container">
+            <input type="text" placeholder="Buscar afiliado, médico, prestación...">
+            <button>Buscar</button>
+        </div>
+
+        <section id="afiliados">
+            <h2>Gestión de Afiliados</h2>
+            <p>Aquí puedes buscar, añadir o editar afiliados.</p>
+            
+            <h3>Registrar Nuevo Paciente</h3>
+            <form id="form-registrar-paciente">
+                <div class="form-group">
+                    <label for="pac-nombre">Nombre:</label>
+                    <input type="text" id="pac-nombre" name="pac-nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="pac-apellido">Apellido:</label>
+                    <input type="text" id="pac-apellido" name="pac-apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="pac-cedula">Cédula / DNI:</label>
+                    <input type="text" id="pac-cedula" name="pac-cedula" required>
+                </div>
+                <div class="form-group">
+                    <label for="pac-email">Email:</label>
+                    <input type="email" id="pac-email" name="pac-email">
+                </div>
+                <button type="submit" class="btn-submit">Registrar Paciente</button>
+            </form>
+
+            <h3 class="list-title">Listado de Pacientes</h3>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Cédula / DNI</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-pacientes-tbody">
+                    <tr>
+                        <td>Juan</td>
+                        <td>Pérez</td>
+                        <td>12.345.678</td>
+                        <td>juan.perez@email.com</td>
+                    </tr>
+                    <tr>
+                        <td>Maria</td>
+                        <td>González</td>
+                        <td>98.765.432</td>
+                        <td>maria.gonzalez@email.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="medicos">
+            <h2>Gestión de Médicos</h2>
+            <p>Aquí puedes buscar, añadir o editar médicos.</p>
+            <h3>Registrar Nuevo Médico</h3>
+            <form>
+                <div class="form-group">
+                    <label for="med-nombre">Nombre:</label>
+                    <input type="text" id="med-nombre" name="med-nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="med-especialidad">Especialidad:</label>
+                    <input type="text" id="med-especialidad" name="med-especialidad" required>
+                </div>
+                <div class="form-group">
+                    <label for="med-matricula">Matrícula / ID Profesional:</label>
+                    <input type="text" id="med-matricula" name="med-matricula" required>
+                </div>
+                <button type="submit" class="btn-submit">Registrar Médico</button>
+            </form>
+        </section>
+
+        <section id="prestaciones">
+            <h2>Gestión de Prestaciones</h2>
+            <p>Aquí puedes ver el catálogo y añadir nuevos servicios.</p>
+            <h3>Añadir Nueva Prestación</h3>
+            <form>
+                <div class="form-group">
+                    <label for="pres-nombre">Nombre de la Prestación:</label>
+                    <input type="text" id="pres-nombre" name="pres-nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="pres-codigo">Código:</label>
+                    <input type="text" id="pres-codigo" name="pres-codigo" required>
+                </div>
+                <div class="form-group">
+                    <label for="pres-costo">Costo:</label>
+                    <input type="number" id="pres-costo" name="pres-costo" required>
+                </div>
+                <button type="submit" class="btn-submit">Añadir Prestación</button>
+            </form>
+        </section>
+
+        <section id="citas">
+            <h2>Gestión de Citas Médicas</h2>
+            <p>Aquí puedes agendar nuevas citas, ver el calendario...</p>
+        </section>
+
+        <section id="reportes">
+            <h2>Reportes y Estadísticas</h2>
+            <p>Aquí puedes generar reportes de atenciones, facturación, etc...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sistema de Gestión de Salud</p>
+    </footer>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
